@@ -1,0 +1,29 @@
+# Python相关
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# 生成文件
+*.log
+*.pdb
+
+# 测试和开发环境
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE相关
+.vscode/
+.idea/
+
+# 其他
+.DS_Store
+cacert.pem

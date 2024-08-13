@@ -1,0 +1,4 @@
+cryptography==42.0.5
+requests<3.0
+gmssl==3.2.2
+certifi
