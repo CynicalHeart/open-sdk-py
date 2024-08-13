@@ -8,7 +8,7 @@ setup(
     long_description_content_type='text/markdown',
     author='CynicalHeart',
     author_email='wantless_wty@163.com',
-    url='',  # TODO 上传到仓库中 
+    url='https://github.com/CynicalHeart/open-sdk-py',
     packages=find_packages(),
     license='MIT',
     install_requires=['requests', 'cryptography', 'gmssl', 'certifi'],
