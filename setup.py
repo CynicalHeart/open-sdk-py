@@ -8,7 +8,6 @@ setup(
     long_description_content_type='text/markdown',
     author='CynicalHeart',
     author_email='wutianyu@yljr.com',
-    url='https://github.com/CynicalHeart/open-sdk-py',
     packages=find_packages(),
     license='MIT',
     install_requires=['requests', 'cryptography', 'gmssl', 'certifi'],
