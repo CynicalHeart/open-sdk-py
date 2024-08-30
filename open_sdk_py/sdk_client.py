@@ -2,7 +2,6 @@ import json
 import os
 import time
 import requests
-import certifi
 import logging
 from typing import Any, Dict, Optional
 
@@ -100,7 +99,7 @@ class OpenPlatformClient:
         response = requests.post(request_url,
                                  data=json.dumps(data),
                                  headers=headers,
-                                 verify=get_ca_path())
+                                 verify=False)
 
         log.info(f"请求云链开放平台接口，响应信息为：{response.text}")
         return response.json()
@@ -130,17 +129,6 @@ def get_public_key(type: AlgorithmType):
         return load_sm2_public_key(resoucre_path)
     else:
         return load_rsa_public_key(resoucre_path)
-
-
-def get_ca_path():
-    """先读取资源，没有的化读系统自带的证书"""
-    resoucre_path = os.path.join(os.path.dirname(__file__),
-                                 OpenPlatformConstants.RESOURCE,
-                                 OpenPlatformConstants.SSL_FILE_NAME)
-    if os.path.exists(resoucre_path):
-        return resoucre_path
-    else:
-        certifi.where()  # 系统自带的证书
 
 
 # 配置日志格式
