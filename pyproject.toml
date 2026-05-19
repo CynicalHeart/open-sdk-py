@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "open-sdk-py"
+version = "2.2.0"
+description = "云枢开放服务平台集成SDK工具（Python版）"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "CynicalHeart", email = "wutianyu@yljr.com" }]
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.28,<3",
+    "cryptography>=42",
+    "certifi>=2024",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://open.yljr.com"
+Repository = "https://github.com/anomalyco/open-sdk-py"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["open_sdk_py"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+
+reportMissingTypeStubs = false
+reportUnusedCallResult = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+reportUnknownArgumentType = false
+reportUnknownLambdaType = false
+reportMissingTypeArgument = false
+reportAny = false
+reportImplicitStringConcatenation = false
+

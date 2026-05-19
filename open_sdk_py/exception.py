@@ -4,7 +4,7 @@ from .result import ResultCode
 class OpException(Exception):
     """自定义异常类"""
 
-    def __init__(self, status: str = None, msg: str = None):
+    def __init__(self, status: str = "", msg: str = "") -> None:
         super().__init__(msg)
         self.status = status
         self.msg = msg
